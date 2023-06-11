@@ -1,85 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP2</title>
-    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <div class="nav-container">
+
+    <div class="background">
+        <header>
             <div class="logo">
-                <a href="index.html"><img src="imagens/logo.png" ></a>
+                <h1>Matheus</h1>
+            </div><!--logo-->
+            <div class="search box">
+                <form class="d-flex" role="search" onsubmit="searchItem(event)">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button type="submit" class="btn btn-dark">Procurar</button>
+                </form>
             </div>
-       
-        <div class="OMG">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <div class="nav-bar">
-            <ul>
-                <li><a href="a" class="active">hahahahaha</a></li>
-                <li><a href="a" class="#categorias">Categorias</a></li>
-                <li><a href="a" class="#produtos">produtos</a></li>
-                <li><a href="a" class="#novidades">novidades</a></li>
-            </ul>
-        </div>
+            <div class="cabeçalho-link">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Destaque</a>
+                </li>
+                <li>
+                    <a href="#">Novo</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </div><!--cabeçalho-link-->
+            <div class="icon"><span><ion-icon name="bag-outline"></ion-icon></span></div><!--icon-->
+        </header>
+
+        <div class="Meio">
+            <h1>NOVOS MODELOS</h1>
+            <P>Novas cores, agora também disponíveis</P>
+            <button>Novas coleção</button>
+        </div><!--Meio-->
     </div>
-    </header>
-     
-
-    <div class="content">
-        <div class="content-box">
-            <h2>20% De desconto<br> Em produtos novos </h2>
-            <label>A melhor loja de roupas<span>roupas</span></label> <br>
-            <a href="#">Compre agora<i class="fa-solid fa-arrow-right"></i></a>
+    <section id="dataSection"></section>
+    </section><!--background-->
+    <section class="roupas">
+        <h1>Novos tênis</h1>
+        <div class="container-roupas">
+            <!-- Elementos do card da API serão adicionados aqui -->
         </div>
-    </div>
+    </section>
+    <section class="cta">
+        <div class="text-cta">
+            <h6>VERÃO A VENDA</h6>
+            <h4>20% OFF<br>NOVAS CHEGADAS</h4>
+            <a href="#" class="btn">Compre agora</a>
+        </div><!--text-cta-->
+    </section><!--cta-->
+
+    <section>
+        <h1>ESTOQUE NOVOS</h1>
+        <div class="Container-roupas">
+            <div class="roupa">
+                <img src="img/roupa1.jpg" alt="">
+                <p>Lorem Ipsum dizgi</p>
+                <h5>$188</h5>
+                <ion-icon name="cart-outline"></ion-icon>
+            </div><!--roupa-->
 
 
-    <div class="category" id="category">
-        <div class="category-title">
-            <h2>hahah roupas categorias</h2>
-        </div>
-        <div class="category-box">
-            <div class="box woman-box">
-                <div class="box content b2">
-                    <h3> Mais populares</h3>
-                    <label>Woman</label>
-                    <a href="#">Go here</a>
-                </div>
-                <img src="/imagens/fundo.jpg" alt="">
+            <div class="roupa">
+                <img src="img/tren2.jpg" alt="">
+                <p>Lorem Ipsum dizgi</p>
+                <h5>$188</h5>
+                <span><ion-icon name="cart-outline"></ion-icon></span>
+            </div><!--roupa-->
+
+            <div class="roupa">
+                <img src="img/tren3.jpg" alt="">
+                <p>Lorem Ipsum dizgi</p>
+                <h5>$188</h5>
+                <ion-icon name="cart-outline"></ion-icon>
+            </div><!--roupa-->
+
+            <div class="roupa">
+                <img src="img/tren4.jpg" alt="">
+                <p>Lorem Ipsum dizgi</p>
+                <h5>$188</h5><ion-icon name="cart-outline"></ion-icon>
+            </div><!--roupa-->
+        </div><!--container-roupas-->
+    </section>
+
+    <div class="Marcas">
+        <img src="img/brand1.png" alt="Marca">
+        <img src="img/brand2.png" alt="Marca">
+        <img src="img/brand3.png" alt="Marca">
+        <img src="img/brand4.png" alt="Marca">
+        <img src="img/brand5.png" alt="Marca">
+        <img src="img/brand6.png" alt="Marca">
+    </div><!--Marcas-->
+
+    <section class="Contato" id="Contato">
+        <div class="meio-contato">
+            <h3>MAtheus Porto</h3>
+            <h5>Nós envie uma mensagem</h5>
+            <div class="icons">
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
             </div>
-            <div class="box man-box">
-                <div class="box content b2">
-                    <h3> Mais populares</h3>
-                    <label for="">MAN</label>
-                    <a href="#">Compre agora</a>
-                </div>
-                <img src="imagens/logo.png" alt="">
-            </div>
         </div>
+
+        <div class="meio-contato">
+            <h3>Explore</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#new">New</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+
+        <div class="meio-contato">
+            <h3>Our Services</h3>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Free Shipping</a></li>
+            <li><a href="#">Gift Cards</a></li>
+        </div>
+
+        <div class="meio-contato">
+            <h3>Shopping</h3>
+            <li><a href="#">Clothing Store</a></li>
+            <li><a href="#">Trending Shoes</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+        </div>
+
+    </section>
+
+    <div class="last-text">
+        <p>Copyright © 2022 All rights reserved | This template is made with by Tahmid Ahmed</p>
     </div>
 
-    
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get('search');
 
+  if (searchTerm) {
+    const roupas = document.querySelectorAll('.roupas');
 
+    for (const roupa of roupas) {
+      const nomeRoupa = roupa.querySelector('.roupa-nome');
 
+      if (nomeRoupa.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+        roupa.style.display = 'block';
+      } else {
+        roupa.style.display = 'none';
+      }
+    }
+  }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+  const pageNumber = 2; // Página desejada
 
+  fetch(`https://diwserver.vps.webdock.cloud/products?page=${pageNumber}`)
+    .then(response => response.json())
+    .then(data => {
+      const roupasContainer = document.querySelector('.container-roupas');
 
+      if (data.products && Array.isArray(data.products)) {
+        data.products.forEach((produto, index) => {
+          // Criar os elementos HTML para cada produto
+          const card = document.createElement('div');
+          card.className = 'card roupas'; // Adiciona a classe 'roupas' para selecionar no código posteriormente
 
+          const imgDiv = document.createElement('div');
+          imgDiv.className = 'card-img';
+          imgDiv.innerHTML = `<img src="${produto.image}" alt="Imagem do produto">`;
 
+          const roupasDiv = document.createElement('div');
+          roupasDiv.className = 'roupa-nome';
+          roupasDiv.textContent = produto.title;
 
+          const precoDiv = document.createElement('div');
+          precoDiv.className = 'preco';
+          precoDiv.textContent = `Preço: R$ ${produto.price}`;
+        
+          const form = document.querySelector('form');
+  form.addEventListener('submit', submitForm);
 
+          // Adicionar os elementos ao card
+          card.appendChild(imgDiv);
+          card.appendChild(roupasDiv);
+          card.appendChild(precoDiv);
 
+          // Adicionar o botão de detalhes
+          const detalhesButton = document.createElement('button');
+          detalhesButton.textContent = 'Ver detalhes';
+          detalhesButton.className = 'detalhes-button'; // Adiciona a classe CSS
+          card.appendChild(detalhesButton);
 
+          // Adicionar o card ao container principal
+          roupasContainer.appendChild(card);
 
-    <script src="script.js"></script>
+          // Adicionar o evento de clique ao botão de detalhes
+          detalhesButton.addEventListener('click', () => {
+            // Crie um objeto contendo os dados que deseja transmitir para a página de detalhes
+            const detalhesData = {
+              title: produto.title,
+              price: produto.price,
+              description: produto.description,
+              category: produto.category,
+              // Adicione outras propriedades que você deseja transmitir
+            };
+
+            const productData = JSON.stringify(detalhesData); // Converte os dados em uma string JSON
+            const encodedProductData = encodeURIComponent(productData);
+
+            window.location.href = `detalhes.html?productData=${encodedProductData}`;
+          });
+
+          // Adicionar o evento de clique ao card
+          card.addEventListener('click', () => {
+            const productData = JSON.stringify(produto); // Converte os dados do produto em uma string JSON
+            const encodedProductData = encodeURIComponent(productData);
+
+            window.location.href = `detalhes.html?productData=${encodedProductData}`;
+          });
+        });
+      } else {
+        console.log('Os dados não contêm produtos válidos.');
+      }
+    })
+    .catch(error => {
+      console.log('Ocorreu um erro:', error);
+    });
+});
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>
