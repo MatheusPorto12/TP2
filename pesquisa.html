@@ -86,23 +86,31 @@
 
 
     <script>
-    function submitForm(event) {
-        event.preventDefault();
-      
-        const searchInput = document.getElementById('searchInput');
-        const searchTerm = searchInput.value;
-      
-        window.location.href = `pesquisa.html?search=${encodeURIComponent(searchTerm)}`;
+    document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get('search');
+
+  if (searchTerm) {
+    const roupas = document.querySelectorAll('.roupas');
+    let produtosEncontrados = false;
+
+    for (const roupa of roupas) {
+      const nomeRoupa = roupa.querySelector('.roupa-nome');
+
+      if (nomeRoupa.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+        roupa.style.display = 'block';
+        produtosEncontrados = true;
+      } else {
+        roupa.style.display = 'none';
       }
-      
-      const form = document.querySelector('form');
-      form.addEventListener('submit', submitForm);
-      
-      
-      
-      
-      </script>
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    }
+
+    if (!produtosEncontrados) {
+      alert('Nenhum produto correspondente encontrado.');
+    }
+  }
+});</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
          crossorigin="anonymous"></script>
 </body>
