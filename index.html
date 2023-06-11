@@ -147,24 +147,30 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const searchTerm = urlParams.get('search');
+        function submitForm(event) {
+  event.preventDefault();
 
-  if (searchTerm) {
+  const searchInput = document.getElementById('searchInput');
+  const searchTerm = searchInput.value;
+
+  // Redirecionar para a página pesquisa.html com os parâmetros da pesquisa
+  window.location.href = `pesquisa.html?search=${encodeURIComponent(searchTerm)}`;
+
+
+  if (searchQuery.trim() !== '') {
     const roupas = document.querySelectorAll('.roupas');
 
     for (const roupa of roupas) {
       const nomeRoupa = roupa.querySelector('.roupa-nome');
 
-      if (nomeRoupa.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+      if (nomeRoupa.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
         roupa.style.display = 'block';
       } else {
         roupa.style.display = 'none';
       }
     }
   }
-});
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const pageNumber = 2; // Página desejada
